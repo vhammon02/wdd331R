@@ -1,0 +1,206 @@
+          //colors
+          $body-background-color: darkred;
+          $form-background-color: tan;
+          $input-color: white;
+          $headlines-color : white;
+          //breakpoints
+          $break-small: 450px;
+          $break-medium: 750px;
+          $break-large: 1440px;
+          //center
+          $center-width: 90%;
+          $center-max-width: 960px;
+          //input
+          $input-width: 65%;
+
+body {
+               background-color: $body-background-color;     
+               display: flex;     
+               flex-direction: column;
+               
+          }
+        
+h1 {
+    color: $headlines-color;
+}          
+
+// #contactform {
+//     background-color: $form-background-color;
+//     input, textarea {
+//         background-color: $input-color;
+//         flex: 2;
+//         width: 100%;
+        
+//     }
+//     @media (min-width: $break-small) {
+//        & {
+//           width: 100%;
+    
+//         } 
+//     }
+//     @media (min-width: $break-medium) {
+//        & {
+//           width: 70%;
+//           max-width: 900px;
+//           margin-left: auto;
+//           margin-right: auto; 
+//         } 
+//     }
+// }
+
+
+
+// @mixin center {
+//   width: $center-width;
+//   max-width: $center-max-width;
+// }
+// #content {
+//     @include center;
+// }
+      
+@mixin breakpoint($break) {
+@if $break == large {
+@media (max-width: $break-large) { @content; }
+}
+@else if $break == medium {
+@media (max-width: $break-medium) { @content; }
+}
+@else if $break == small {
+@media (max-width: $break-small) { @content; }
+}
+@else {
+@media ($break) { @content; }
+}
+}               
+
+#contactform {
+        
+        background-color: $form-background-color;
+        
+    
+        input, textarea {  
+          background-color: $input-color;
+          
+        }
+        
+        @include breakpoint(small) { 
+            width: 100%;
+            fieldset {
+                padding: auto;
+            }
+            fieldset div {
+                flex-direction: column;
+                width: 100%;
+                justify-content: start;
+                padding: 0%;
+                padding-top: 0px;
+            }
+            
+            input, textarea {  
+          width: 100%;
+          
+        }
+            fieldset > input {
+                    width: auto;
+                    
+                    padding: 3px;
+                }
+            fieldset label {
+                    padding-right: 0px;
+                }
+            }           
+        
+    }
+    form {
+        @include breakpoint(large) { 
+                
+                display: flex;
+                width: 75%;
+                margin: auto;
+                
+                fieldset{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    
+                    width: 100%;
+
+                }
+                fieldset div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding:7px;
+                    
+                }
+                fieldset > input {
+                    margin-right: auto;
+                    align-self: flex-start;
+                }
+                fieldset label {
+                    padding-right: 10px;
+                }
+                fieldset div input, textarea {
+                    background-color: $input-color;
+                    width: $input-width;
+                }
+
+        
+    }
+            @include breakpoint(medium) {
+                display: flex;
+                width: 75%;
+                margin: auto;
+                
+                fieldset{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: flex-end;
+                    
+                    width: 100%;
+
+                }
+                fieldset div {
+                    width: 100%;
+                    display: flex;
+                    justify-content: flex-end;
+                    padding:7px;
+                    
+                }
+                fieldset > input {
+                    margin-right: auto;
+                    align-self: flex-start;
+                }
+                fieldset label {
+                    padding-right: 10px;
+                }
+                fieldset div input, textarea {
+                    background-color: $input-color;
+                    width: $input-width;
+                }
+                
+            }
+                
+                textarea {
+                    align-content: right;
+                }
+}
+
+
+
+    
+
+
+
+//         #contactform fieldset > div {
+//         @include breakpoint(medium) {
+//             display: flex;
+//             align-items: center;
+//             justify-content: flex-end;
+//             gap: 0.75rem;
+//             width: 70%;
+//   }
+// }
+
+
+

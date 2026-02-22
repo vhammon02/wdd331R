@@ -1,0 +1,107 @@
+body {
+  background-color: darkred;
+  display: flex;
+  flex-direction: column;
+}
+
+h1 {
+  color: white;
+}
+
+#contactform {
+  background-color: tan;
+}
+#contactform input, #contactform textarea {
+  background-color: white;
+}
+@media (max-width: 450px) {
+  #contactform {
+    width: 100%;
+  }
+  #contactform fieldset {
+    padding: auto;
+  }
+  #contactform fieldset div {
+    flex-direction: column;
+    width: 100%;
+    justify-content: start;
+    padding: 0%;
+    padding-top: 0px;
+  }
+  #contactform input, #contactform textarea {
+    width: 100%;
+  }
+  #contactform fieldset > input {
+    width: auto;
+    padding: 3px;
+  }
+  #contactform fieldset label {
+    padding-right: 0px;
+  }
+}
+
+@media (max-width: 1440px) {
+  form {
+    display: flex;
+    width: 75%;
+    margin: auto;
+  }
+  form fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+  form fieldset div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+  }
+  form fieldset > input {
+    margin-right: auto;
+    align-self: flex-start;
+  }
+  form fieldset label {
+    padding-right: 10px;
+  }
+  form fieldset div input, form textarea {
+    background-color: white;
+    width: 65%;
+  }
+}
+@media (max-width: 750px) {
+  form {
+    display: flex;
+    width: 75%;
+    margin: auto;
+  }
+  form fieldset {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 100%;
+  }
+  form fieldset div {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 7px;
+  }
+  form fieldset > input {
+    margin-right: auto;
+    align-self: flex-start;
+  }
+  form fieldset label {
+    padding-right: 10px;
+  }
+  form fieldset div input, form textarea {
+    background-color: white;
+    width: 65%;
+  }
+}
+form textarea {
+  align-content: right;
+}
+
+/*# sourceMappingURL=styles.css.map */
