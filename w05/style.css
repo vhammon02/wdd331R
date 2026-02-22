@@ -1,0 +1,154 @@
+
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  height: 100vh;
+  background: #1e1f26;
+  color: #fff;
+}
+
+
+
+.content {
+  display: grid;
+  grid-template-rows: 60px 1fr 40px;
+  height: 100vh;
+}
+
+
+
+.topbar {
+  background: #0f0f12;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  padding: 0 20px;
+  border-bottom: 1px solid #2a2d35;
+}
+
+.topbar .left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  font-size: 20px;
+}
+
+.title strong {
+  display: block;
+  font-size: 14px;
+}
+
+.title span {
+  font-size: 12px;
+  color: #9aa0a6;
+}
+
+.topbar .right {
+  display: flex;
+  gap: 10px;
+}
+
+.button {
+  background: #2c2f36;
+  color: #fff;
+  border: none;
+  padding: 6px 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.button:hover {
+  background: #3a3f47;
+}
+
+.signup-green {
+  background: #47cf73;
+  color: #000;
+}
+
+.signup-green:hover {
+  background: #3db865;
+}
+
+.workspace {
+  display: grid;
+  grid-template-rows: 45% 55%;
+}
+
+
+.editors {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-bottom: 1px solid #2a2d35;
+}
+
+.panel {
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  border-right: 1px solid #2a2d35;
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+.panel-header {
+  display: flex;
+  align-items: center;
+  padding-left: 12px;
+  font-weight: 600;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.panel-header.html {
+  background: #2d1f2f;
+}
+
+.panel-header.css {
+  background: #1f2b3a;
+}
+
+.panel-header.js {
+  background: #3a2d1f;
+}
+
+.panel-body {
+  background: #1e1f26;
+}
+
+
+.preview {
+  background: #ffffff;
+  color: #000;
+  overflow: hidden;
+}
+
+.preview-code {
+  padding: 20px;
+}
+
+.console {
+  background: #2c2f36;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.console button {
+  background: #3a3f47;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.console button:hover {
+  background: #4a4f57;
+}
