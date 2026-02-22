@@ -1,0 +1,109 @@
+//colors
+$light-grey: #f3f4f6;
+$mid-grey: #bbbfc2;
+$dark-grey: #6c757d;
+$white: white;
+//font weight
+$bold: 700;
+$heavy: 600;
+
+.products {
+  background: $light-grey;
+  width: 300px;
+  margin: auto;
+  font-family: helvetica, arial, san-serif;
+  padding: 1em;
+  
+  &__table {
+    border: 1px solid $dark-grey;
+    border-radius: 8px;
+  }
+  &__cart {
+    display: grid;
+    grid-template-columns: 1fr auto; 
+    align-items: center;
+    color: #6c757d;
+    
+  }
+  &__amount {
+    color: white;
+    background: $dark-grey;
+    font-size: 0.8rem;
+    padding: 2px 11px;
+    border-radius:15px;
+
+    text-align: center;
+    font-weight:$bold;
+    font-size: 18px;
+  }
+  &__card {
+    
+  }
+  &__item {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    background: white;
+    padding: 1px 10px;
+    border-radius:8px 8px 0 0;
+    border-bottom: 1px solid $mid-grey;
+      &:nth-child(n + 5) {
+      border: none;
+      border-radius:0 0 8px 8px;
+    }   
+  }
+  &__name {
+    font-weight: $bold;
+    font-size:16px;
+    padding:0;
+    margin-bottom: -5px;
+  }
+  &__description {
+    font-size: 12px;
+    color: $dark-grey;
+  }
+  &__price {
+    padding: 1em;
+    font-weight: $heavy;
+    color: $dark-grey;
+  }
+  &__total {
+    grid-template-columns: 1fr 1fr auto;
+    align-items: center
+  }
+  &__bottom {
+    padding: 8px;
+    background: $white;
+    margin-top: 1em;
+    border: 1px solid $mid-grey;
+    border-radius: 4px;
+  }
+  &__total__price {
+    padding: 1em;
+    font-weight: $bold;
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border-radius: 4px;
+    border: 1px solid $dark-grey;
+    
+    background: $white;
+  }
+  &__button {
+    background: $dark-grey;
+    border: none;
+    padding: 8px;
+    color: $white;
+    font-size: 14px;
+    font-weight: $heavy;
+    
+  }
+  &__input {
+    border-radius: 8px 0 0 8px;
+    border: none;
+    padding: 7px;
+    color: $dark-grey;
+    font-size:14px;
+  }
+}
